@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -291,7 +292,7 @@
                         Education
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Computer Science B.Sc. - Stanford University
+                        BSc in Applied Sciences - Rajarata University of Sri Lanka
                       </p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
                         2014 - 2018
@@ -302,7 +303,7 @@
                         Experience
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Senior Frontend Developer - TechCorp
+                        Frontend Developer - MediQ
                       </p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
                         2020 - Present
@@ -337,7 +338,7 @@
                       { name: "HTML/CSS", level: 95 },
                       { name: "JavaScript", level: 90 },
                       { name: "React", level: 90 },
-                      { name: "TypeScript", level: 80 },
+                      { name: "Bootstrap", level: 90 },
                       { name: "Node.js", level: 75 },
                     ].map((skill) => (
                       <div key={skill.name} className="mb-4">
@@ -365,15 +366,10 @@
                     <div className="flex flex-wrap gap-4">
                       {[
                         "React",
-                        "TypeScript",
-                        "Next.js",
+                        "Bootstrap",
                         "Tailwind",
-                        "Redux",
-                        "Git",
                         "Figma",
                         "Firebase",
-                        "Jest",
-                        "GraphQL",
                       ].map((tool) => (
                         <div
                           key={tool}
@@ -389,84 +385,87 @@
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="min-h-screen py-16">
-              <div className="w-full max-w-6xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
-                  My Projects
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {[
-                    {
-                      title: "E-commerce Platform",
-                      description:
-                        "A full-featured online store with cart, checkout, and admin dashboard.",
-                      tags: ["React", "Node.js", "MongoDB"],
-                    },
-                    {
-                      title: "Task Management App",
-                      description:
-                        "Kanban-style task management with real-time collaboration.",
-                      tags: ["React", "Firebase", "Tailwind"],
-                    },
-                    {
-                      title: "Portfolio Website",
-                      description:
-                        "A modern portfolio website with dark mode and animations.",
-                      tags: ["React", "GSAP", "Framer Motion"],
-                    },
-                    {
-                      title: "Weather Dashboard",
-                      description:
-                        "Weather application with 5-day forecast and location search.",
-                      tags: ["React", "OpenWeather API", "Chart.js"],
-                    },
-                    {
-                      title: "Recipe Finder",
-                      description:
-                        "Search and save your favorite recipes with step-by-step instructions.",
-                      tags: ["React", "Spoonacular API", "Redux"],
-                    },
-                    {
-                      title: "Social Media Dashboard",
-                      description:
-                        "Analytics dashboard for social media metrics visualization.",
-                      tags: ["React", "D3.js", "Express"],
-                    },
-                  ].map((project, index) => (
-                    <div
-                      key={index}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700"
-                    >
-                      <div className="h-48 bg-gradient-to-br from-primary to-pink-500 flex items-center justify-center">
-                        <i className="fas fa-laptop-code text-6xl text-white opacity-80"></i>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-                          {project.title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 mb-4">
-                          {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded"
-                            >
-                              {tag}
-                              ```{" "}
-                            </span>
-                          ))}
-                        </div>
-                        <button className="px-4 py-2 rounded-full bg-primary text-white font-medium hover:bg-blue-700 transition-colors">
-                          View Project
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
+<section id="projects" className="min-h-screen py-16">
+  <div className="w-full max-w-6xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
+      My Projects
+    </h2>
+    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {[
+        {
+          title: "MediQ - Antibiotic Analysis System",
+          description:
+            "Healthcare web application for Karapitiya National Hospital to monitor and analyze antibiotic distribution data across hospital wards, improving tracking and accountability in healthcare management.",
+          tags: ["Frontend Development", "UI/UX Design", "Healthcare Tech", "Data Visualization"],
+          featured: true,
+          link: "https://mediq.42web.io/",
+        },
+        {
+          title: "Pulzar Club Website",
+          description:
+            "Official website for Pulzar Club featuring modern design, responsive layout, and engaging user experience for the tech community. Successfully launched as part of a collaborative team effort.",
+          tags: ["Frontend Development", "UI/UX Design", "Responsive Design", "Team Collaboration"],
+          featured: true,
+          link: "https://pulzarclub.com",
+        },
+      ].map((project, index) => (
+        <div
+          key={index}
+          className={`bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
+            project.featured ? 'ring-2 ring-primary ring-opacity-50' : ''
+          }`}
+        >
+          {project.featured && (
+            <div className="bg-gradient-to-r from-primary to-pink-500 text-white text-center py-1 text-sm font-medium">
+              Featured Project
+            </div>
+          )}
+          <div className="h-48 bg-gradient-to-br from-primary to-pink-500 flex items-center justify-center relative">
+            {project.featured ? (
+              <i className="fas fa-star text-6xl text-white opacity-80"></i>
+            ) : (
+              <i className="fas fa-laptop-code text-6xl text-white opacity-80"></i>
+            )}
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+              {project.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-3 py-1 bg-gradient-to-r from-primary/10 to-pink-500/10 text-primary dark:text-pink-300 rounded-full border border-primary/20"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-2">
+              <a
+                href={project.link}
+                target={project.link.startsWith('http') ? '_blank' : '_self'}
+                rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="px-4 py-2 rounded-full bg-primary text-white font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
+              >
+                <i className="fas fa-external-link-alt text-sm"></i>
+                View Project
+              </a>
+              {project.featured && (
+                <button className="px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+                  Case Study
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
             {/* Contact Section */}
             <section
@@ -535,7 +534,7 @@
           <footer className="py-6 bg-gray-100 dark:bg-gray-800">
             <div className="container mx-auto text-center">
               <p className="text-gray-600 dark:text-gray-300">
-                &copy; {new Date().getFullYear()} John Doe. All rights
+                &copy; {new Date().getFullYear()} KVM SANDEEPA. All rights
                 reserved.
               </p>
             </div>
